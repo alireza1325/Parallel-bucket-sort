@@ -10,9 +10,10 @@ The MPI_Alltoall_vecvecT function is a combination of MPI_Alltoall and MPI_Allto
 
 
 The code was run with a different number of processors (P) and random numbers (M). The timings for just part of the algorithm related to the bucket sort are tabulated in the table below (generating and distributing random numbers, finding median, and saving numbers to txt files did not consider for this time calculations). Based on the table below, when M is small (i.g. 1000) by increasing the number of processors, the processing time has also been increased because the communication is much more than the computation. However, when M is relatively large enough (i.g 10^5, 10^6, and 10^7) there is a clear inverse relationship between time and P. As p grows, the parallel time has been reduced, which is good. Moreover, it seems that the computational complexity of the implemented bucket sort is O(N) because by making the number of random numbers 10 times bigger, the processing time has been multiplied by approximately 10. This fact can be vividly seen by looking at the processing time of the code with different p when increasing M from 10^6 to 10^7.
-M	103	104	105	106	107
-P
-1	0.0006849	0.005713	0.056817	0.57099	5.50691
-2	0.0006331	0.003142	0.028026	0.28975	2.90935
-4	0.0007886	0.003219	0.026617	0.19935	1.85155
-8	0.0015053	0.004166	0.024984	0.15118	1.49275
+|     M    |     10^3         |     10^4        |     10^5        |     10^6       |     10^7       |
+|----------|------------------|-----------------|-----------------|----------------|----------------|
+|     P    |                  |                 |                 |                |                |
+|     1    |     0.0006849    |     0.005713    |     0.056817    |     0.57099    |     5.50691    |
+|     2    |     0.0006331    |     0.003142    |     0.028026    |     0.28975    |     2.90935    |
+|     4    |     0.0007886    |     0.003219    |     0.026617    |     0.19935    |     1.85155    |
+|     8    |     0.0015053    |     0.004166    |     0.024984    |     0.15118    |     1.49275    |
