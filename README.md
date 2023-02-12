@@ -17,3 +17,5 @@ The code was run with a different number of processors (P) and random numbers (M
 |     2    |     0.0006331    |     0.003142    |     0.028026    |     0.28975    |     2.90935    |
 |     4    |     0.0007886    |     0.003219    |     0.026617    |     0.19935    |     1.85155    |
 |     8    |     0.0015053    |     0.004166    |     0.024984    |     0.15118    |     1.49275    |
+
+![Random numbers vs # of processors](Picture1.png)
